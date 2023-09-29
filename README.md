@@ -59,7 +59,7 @@ Basic Features of The App
         - Log out: Terminates user access for security and privacy.
 
 DATABASE USED : SQLITE3 - Default database of django
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/8dcdc2a7-c4f6-486a-93d3-3a983642cf8c)
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/1664ae9d-0077-40cb-9354-f3723f21930f)
 
 
 BASIC ENITIES - CHECKED
