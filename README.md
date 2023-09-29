@@ -4,27 +4,29 @@ Django was used in the system .The Cross Options Order Management System (OMS) i
 
 Basic Features of The App
 
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/cd6ae08a-c0ae-4020-9c2c-0ac8e517643d)
 1. Homepage - Starting point where users land upon visiting the app, offering an introduction and access to its core features and content.
         - Home page Button
         - About Us Button
         - Sign In Button
         - Sign Up Button
         - Admin Sign In Button
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/cd6ae08a-c0ae-4020-9c2c-0ac8e517643d)
 
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/d6185e80-2bd3-4b5a-a0f5-4bf221cee54f)
+
 2. Sign In - Users can Sign In and create a new trade
         - Username
         - Password - With password hashing
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/d6185e80-2bd3-4b5a-a0f5-4bf221cee54f)
 
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/304a5142-e0db-404a-a70e-6caa1e7d29a2)
+
 3. Sign Up – Users can register and create a new profile
         - Auto ID Generated ID to  avoid double primary keys
         - Username
         - Age
         - Password - With password hashing
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/304a5142-e0db-404a-a70e-6caa1e7d29a2)
+
         
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/eb3f3573-964e-4f05-a9c8-311835a36bcc)
 4. User Dashboard - Once Signed In and authenticated, users can create and update additional information such trade.
         - Need authentication to access this page
         - Find all historical trades:
@@ -41,22 +43,26 @@ Basic Features of The App
                     - User ID of user that executed the trade
                     - Total payment in $ for all shares in the trade
         - Log out: Terminates user access for security and privacy.
-        ![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/ecf39ff8-8aa8-4cd4-8024-4b6a4da68cbf)
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/eb3f3573-964e-4f05-a9c8-311835a36bcc)
+
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/ecf39ff8-8aa8-4cd4-8024-4b6a4da68cbf)
 
 
         
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/55b7633b-8001-4dc0-8b85-adf5cd682026)
 5. Admin Log In – Once Signed In and authenticated, Admin can login using username and password
         - "admin123" Default username and password for demo test
         - Admin Sign In requires User ID, username, age, and password to be authenticated and will be directed to admin dashboard
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/55b7633b-8001-4dc0-8b85-adf5cd682026)
+
         
-![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/35fe1559-a2dd-47c2-90d3-c711b7ff5c7f)
 6. Admin Dashboard – Admin can Read, Update and Delete user's trade
         - Need authentication to be valid to access this page
         - Find all users
         - Find all trades for a certain user
         - Change following fields of logged trade: number of shares or price paid
         - Log out: Terminates user access for security and privacy.
+   ![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/35fe1559-a2dd-47c2-90d3-c711b7ff5c7f)
+
 
 DATABASE USED : SQLITE3 - Default database of django
 ![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/1664ae9d-0077-40cb-9354-f3723f21930f)
