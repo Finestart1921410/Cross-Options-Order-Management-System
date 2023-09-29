@@ -1,0 +1,115 @@
+
+{% extends "users/base.html" %}
+  
+  
+{% block content %}
+<h1 class="display-4">Welcome, {{user.username.title|default:'Guest'}}</h1>
+        <p class="lead">
+        </p>
+        <hr class="my-4">
+
+        <a href="/" class="button">Back to Dashboard</a>
+
+            <h1>NEW TRADE</h1>
+            <form method="POST" class="post-form" action="/addnew">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="userid"><b>USER ID:</b></label>
+                    <input type="text" class="form-control grayed-out" id="userid" name="userid" value="{{ user.first_name|default:'' }}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="username"><b>USERNAME:</b></label>
+                    <input type="text" class="form-control grayed-out" id="username" name="username" value="{{ user.username|default:'' }}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="age"><b>AGE:</b></label>
+                    <input type="text" class="form-control grayed-out" id="age" name="age" value="{{ user.last_name|default:'' }}" readonly>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="email"><b>EMAIL:</b></label>
+                    <input type="text" class="form-control grayed-out" id="email" name="email" value="{{ user.email|default:'' }}" readonly>
+                </div>
+                <label for="a">-------------------------------------------------------------------------------------</label>
+
+
+                <div class="mb-3">
+                    <label for="trade"><b>TRADE ID:</b></label>
+                    <input type="text"  id="tradeId" name="trade" readonly>
+                </div>
+                
+                <script>
+                    // Function to generate a unique trade ID
+                    function generateTradeId() {
+                        // You can implement your own logic to generate a unique ID here.
+                        // For simplicity, let's use a timestamp-based ID here.
+                        const timestamp = Date.now();
+                        return `${timestamp}`;
+                    }
+                
+                    // Automatically generate the trade ID when the page loads
+                    const tradeIdField = document.getElementById('tradeId');
+                    if (tradeIdField) {
+                        // Generate a unique trade ID
+                        const uniqueTradeId = generateTradeId();
+                        // Set the generated ID in the input field
+                        tradeIdField.value = uniqueTradeId;
+                    }
+                </script>
+                
+                <div class="mb-3">
+                    <label for="date"><b>DATE OF EXECUTION:</b></label>
+                    {{ form.date }}
+                </div>
+                
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                
+                <style>
+
+.grayed-out {
+            background-color: #f0f0f0; /* Set the background color to a light gray */
+            color: #888; /* Set the text color to a darker gray */
+            
+        }
+                    /* Style the date picker calendar */
+                    .ui-datepicker {
+                        background-color: white; /* Set the background color to white */
+                    }
+                </style>
+                
+                <script>
+                    $(function() {
+                        $("#id_date").datepicker();
+                    });
+                </script>
+                <div class="mb-3">
+                    <label for="shares"><b>AMOUNT OF SHARES BOUGHT:</b></label>
+                    {{ form.shares }}
+                </div>
+                <div class="mb-3">
+                    <label for="symbols"><b>SYMBOL OF SHARE:</b></label>
+                    {{ form.symbols }}
+                </div>
+                <div class="mb-3">
+                    <label for="buysell"><b>BUY/SELL:</b></label>
+                    <select name="buysell" id="buysell">
+                        <option value="BOUGHT">BOUGHT</option>
+                        <option value="SOLD">SOLD</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="payment"><b>TOTAL PAYMENT:</b></label>
+                    {{ form.payment }}
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="button">Submit</button>
+
+                </div>
+            </form>
+
+
+{% endblock content %} 

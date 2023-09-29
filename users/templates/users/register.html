@@ -1,0 +1,82 @@
+{% extends "users/base.html" %}
+{% block title %} Register Page {% endblock title%}
+{% block content %}
+   
+                    <div class="card shadow-lg border-0 rounded-lg mt-0 mb-5">
+                        <div class="card-header justify-content-center">
+                        	<h1 class="font-weight-light my-4 text-left">Sign Up</h1>
+                        </div>
+
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {% if form.errors %}
+                                    <div class="alert alert-danger alert-dismissible" role="alert">
+                                        <div id="form_errors">
+                                            {% for key, value in form.errors.items %}
+                                                <strong>{{ value }}</strong>
+                                            {% endfor %}
+                                        </div>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                {% endif %}
+
+                                <div class="mb-3">
+                                    <label for="first_name"></label>
+                                    <input type="text" id="tradeId" name="first_name" readonly>
+                                </div>
+                                
+                                <script>
+                                    // Function to generate a unique trade ID
+                                    function generateTradeId() {
+                                        // You can implement your own logic to generate a unique ID here.
+                                        // For simplicity, let's use a timestamp-based ID here.
+                                        const timestamp = Date.now();
+                                        return `${timestamp}`;
+                                    }
+                                
+                                    // Automatically generate the trade ID when the page loads
+                                    const tradeIdField = document.getElementById('tradeId');
+                                    if (tradeIdField) {
+                                        // Generate a unique trade ID
+                                        const uniqueTradeId = generateTradeId();
+                                        // Set the generated ID in the input field
+                                        tradeIdField.value = uniqueTradeId;
+                                    }
+                                </script>
+ 
+                                <div class="form-group">
+                                {{ form.username }}
+                                </div>
+                                <div class="form-group">
+ 
+                                    {{ form.last_name }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form.email }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password1 }}
+                                    {{ form.errors.password }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password2 }}
+                                </div>
+                                <div class="form-group text-left">
+                                    <button type="submit" class="button">Create Account</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    
+                        <div class="card-footer text-left">
+                            <div class="small">
+                                <a href="{% url 'login' %}">Have an account? Go to Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock content %}

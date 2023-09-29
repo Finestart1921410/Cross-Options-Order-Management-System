@@ -1,0 +1,101 @@
+{% extends "users/base.html" %}
+  
+{% block title %}Employee Records{% endblock title %}
+  
+
+{% block content %}
+{% load static %}  
+<link rel = "stylesheet" type = "text/css" href = "https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"/>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+<h1 class="font-weight-light my-1 text-left">Admin Dashboard</h1>
+<hr class="my-4">
+
+<h1>EDIT TRADE</h1>
+<form method="POST" class="post-form" action="/update/{{employee.id}}">  
+    {% csrf_token %}
+    <style>
+        .grayed-out {
+            background-color: #f0f0f0; /* Set the background color to a light gray */
+            color: #888; /* Set the text color to a darker gray */
+            
+        }
+
+        
+    </style>
+
+    <div class="mb-3">
+        <label><b>USER ID:</b></label>  
+        <input type="text" class="form-control grayed-out" name="userid" id="id_userid" required maxlength="50" value="{{ employee.userid }}" readonly  />
+    </div>
+    
+    <div class="mb-3">
+        <label><b>USERNAME:</b></label>  
+        <input type="text" class="form-control grayed-out" name="username" id="id_username" required maxlength="50" value="{{ employee.username }}" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label><b>AGE:</b></label>  
+        <input type="text" class="form-control grayed-out" name="age" id="id_age" required maxlength="50" value="{{ employee.age }}"readonly />
+    </div>
+
+
+    <div class="mb-3">
+        <label><b>EMAIL:</b></label>  
+        <input type="text" class="form-control grayed-out" name="email" id="id_email" required maxlength="50" value="{{ employee.email }}" readonly/>
+    </div>
+
+
+    <div class="mb-3">
+        <label><b>TRADE ID:</b></label>  
+        <input type="text" class="form-control grayed-out" name="trade" id="id_trade" required maxlength="50" value="{{ employee.trade }}" readonly/>
+    </div>
+
+    <div class="mb-3">
+        <label><b>DATE OF EXECUTION:</b></label>  
+        <input type="text" class="form-control grayed-out" name="date" id="id_date" required maxlength="50" value="{{ employee.date }}" readonly/>
+    </div>
+    <div class="mb-3">
+        <label><b>SYMBOL OF SHARE:</b></label>  
+        <input type="text" class="form-control grayed-out" name="symbols" id="id_symbols" required maxlength="50" value="{{ employee.symbols }}" readonly />
+    </div>
+    <div class="mb-3">
+        <label><b>BUY/SELL:</b></label>  
+        <input type="text" class="form-control grayed-out" name="buysell" id="id_buysell" required maxlength="50" value="{{ employee.buysell }}" readonly />
+    </div>
+    <label>-------------------------------------------------------------------------------------</label>  
+    <div class="mb-3">
+        <label><b>AMOUNT OF SHARES BOUGHT:</b></label>  
+        <input type="text" class="form-control " name="shares" id="id_shares" required maxlength="50" value="{{ employee.shares }}" />
+    </div>
+    <div class="mb-3">
+        <label><b>TOTAL PAYMENT:</b></label>  
+        <input type="text" class="form-control" name="payment" id="id_payment" required maxlength="50" value="{{ employee.payment }}" />
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="button">Submit</button>
+
+    </div>
+</form>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src = "https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#bootstrapdatatable').DataTable({     
+      "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+        "iDisplayLength": 5
+       } 
+    );
+} );
+</script>
+
+
+
+
+{% endblock content %}
+
+
