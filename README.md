@@ -67,10 +67,10 @@ The Cross Options Order Management System (OMS) is a powerful yet user-friendly 
 ![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/1664ae9d-0077-40cb-9354-f3723f21930f)
 
 
- - **BASIC ENTITIES** - CHECKED
- - **OPERATIONS** - CHECKED
- - **STORAGE & LOGGING** - CHECKED
- - **TECHNICAL EXPECTATIONS** - CHECKED
+ - **BASIC ENTITIES** - CHECKED ✔
+ - **OPERATIONS** - CHECKED ✔
+ - **STORAGE & LOGGING** - CHECKED ✔
+ - **TECHNICAL EXPECTATIONS** - CHECKED ✔
 
 ## Quick Start
 
