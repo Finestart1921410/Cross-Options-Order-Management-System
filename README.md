@@ -84,4 +84,7 @@ To set up this project locally on your computer, follow these steps:
  - $ python manage.py createsuperuser
  - $ python manage.py runserver
 
+![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/2ab2cb00-d97c-4915-9445-5cfabc36b1f8)
+
+
 
