@@ -67,10 +67,10 @@ The Cross Options Order Management System (OMS) is a powerful yet user-friendly 
 ![image](https://github.com/Finestart1921410/Cross-Options-Order-Management-System/assets/136356100/1664ae9d-0077-40cb-9354-f3723f21930f)
 
 
-**BASIC ENTITIES** - CHECKED
-**OPERATIONS** - CHECKED
-**STORAGE & LOGGING** - CHECKED
-**TECHNICAL EXPECTATIONS** - CHECKED
+ - **BASIC ENTITIES** - CHECKED
+ - **OPERATIONS** - CHECKED
+ - **STORAGE & LOGGING** - CHECKED
+ - **TECHNICAL EXPECTATIONS** - CHECKED
 
 ## Quick Start
 
@@ -79,9 +79,9 @@ To set up this project locally on your computer, follow these steps:
 1. Set up a Python virtual environment.
 2. Run the following commands:
 
-$ pip install -r requirements.txt
-$ python manage.py migrate
-$ python manage.py createsuperuser
-$ python manage.py runserver
+ - $ pip install -r requirements.txt
+ - $ python manage.py migrate
+ - $ python manage.py createsuperuser
+ - $ python manage.py runserver
 
 
